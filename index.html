@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moni's Rescue Mission</title>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
+  <style>
+    html, body { 
+      height: 100%; margin: 0; display: grid; place-items: center; background: #000; 
+      font-family: 'Arial', sans-serif;
+    }
+    #game-container { 
+      box-shadow: 0 10px 30px rgba(0,0,0,.15); border-radius: 12px; overflow: hidden; 
+    }
+    .hint { 
+      position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,.6); color: #fff; padding: 8px 12px; border-radius: 999px; font-size: 14px; 
+    }
+    .title {
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="title">MONI'S RESCUE MISSION <br>¡Rescata perritos y evita las serpientes!!</div>
+  <div id="game-container"></div>
+  <div class="hint">Presiona FLECHA ARRIBA para saltar</div>
+
+  <!-- Tu juego -->
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
