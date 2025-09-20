@@ -291,9 +291,25 @@ function gameOver() {
 
     this.physics.pause();
     // Texto central
-    this.add.text(400, 200, 'GAME OVER', { fontSize: '64px', fill: '#ff0000' }).setOrigin(0.5);
+    this.add.text(400, 150, 'GAME OVER', { fontSize: '64px', fill: '#ff0000' }).setOrigin(0.5);
 
     if (gameOverSound) {
         gameOverSound.play();  // 
     }
+
+    // Texto de restart
+    let restartText = this.add.text(400, 220, 'Click to Restart', {
+        fontSize: '32px',
+        fill: '#000',
+        backgroundColor: '#fff',
+        padding: { x: 10, y: 5 }
+    }).setOrigin(0.5).setInteractive();
+
+    // Evento para reiniciar la escena
+    restartText.on('pointerdown', () => {
+        this.scene.restart();
+        isGameRunning = true;
+        score = 0;
+        hits = 0;
+    });    
 }
